@@ -1,0 +1,48 @@
+/* pages/product/product.wxss */
+/* pages/shop_detail/shop_detail.wxss */
+/*组件白色背景*/
+page{
+  background-color: #fff;
+}
+/*商品项*/
+.list{
+  display: flex;
+  position: relative;
+}
+/*商品图片*/
+.shop_img{
+  width: 180rpx;
+  height: 180rpx;
+  margin-right: 20rpx
+}
+/*商品信息*/
+.list_info{
+  width: 350rpx;
+  display: flex;
+  flex-direction: column;
+}
+.list_info text~text{
+  font-size: 16px;
+  color: gray;
+}
+/*评分*/
+.star{
+  position: absolute;
+  right: 20rpx;
+  top:20rpx;
+}
+.star-after{
+  color: #e2e2e2e2
+}
+.star-before{
+  color: #f19e38;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+  overflow: hidden
+}
+/*提示没有下一页*/
+.no-page{
+  text-align: center
+}

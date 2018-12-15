@@ -1,0 +1,49 @@
+/**index.wxss**/
+/*轮播图*/
+.slider,.slider swiper,.slider image{
+  height: 390rpx;
+  width: 100%
+}
+/*搜索*/
+.search-out{
+  padding: 15rpx;
+  background-color: #ddd;
+}
+.search-out .search-inner{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 10rpx;
+}
+.search-text{
+  font-size: 16px;
+  color: gray
+}
+/*菜单*/
+.index_nav{
+  display: flex;
+  flex-wrap: wrap;
+}
+.index_nav .nav_item{
+  display: flex;
+  flex-direction: column;
+  width: 33.3333%;
+  height: 200rpx;
+  box-sizing: border-box;
+  border-right:1px solid #ddd;
+  border-bottom:1px solid #ddd;  
+}
+.index_nav .nav_item:nth-child(3),
+.index_nav .nav_item:nth-child(6){
+border-right: 0
+}
+.index_nav image{
+  width: 80rpx;
+  height: 80rpx;
+  margin: auto auto;
+  margin-bottom: 0
+}
+.index_nav text{
+  font-size: 16px;
+  margin: auto auto;
+}

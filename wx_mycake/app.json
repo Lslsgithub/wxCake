@@ -1,0 +1,51 @@
+{
+  "pages": [
+        "pages/proflie/profile",
+    "pages/shop_car/shop_car",
+    "pages/shop_class/shop_class",
+    "pages/index/index",
+    "pages/search/search",
+    "pages/shop_new/shop_new",
+
+    "pages/logs/logs",
+    "pages/product/product",
+    "pages/addr/addr"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFC0CB",
+    "navigationBarTitleText": "甜心蛋糕",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "green",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/home.png",
+        "selectedIconPath": "img/home-active.png"
+      },
+      {
+        "pagePath": "pages/shop_class/shop_class",
+        "text": "分类",
+        "iconPath": "img/class.png",
+        "selectedIconPath": "img/class-active.png"
+      },
+      {
+        "pagePath": "pages/shop_car/shop_car",
+        "text": "购物车",
+        "iconPath": "img/car.png",
+        "selectedIconPath": "img/car_active.png"
+      },
+      {
+        "pagePath": "pages/proflie/profile",
+        "text": "会员",
+        "iconPath": "img/profile.png",
+        "selectedIconPath": "img/profile-active.png"
+      }
+    ]
+  }
+}

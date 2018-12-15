@@ -1,0 +1,18 @@
+/* pages/search/search.wxss */
+.search-box{
+  background-color: #ddd;
+  padding: 15rpx;
+}
+.search-inner{
+  width: 100%;
+  display: flex;
+  background-color: white;
+  padding: 5rpx 0;
+}
+.search-inner .search-input{
+  width: 650rpx;
+  font-size: 16px
+}
+.search-icon{
+
+}

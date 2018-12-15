@@ -1,0 +1,15 @@
+<view class="shop_class">
+  <view class='nav_left'>
+    <!--可滚动视图区域-->
+    <scroll-view scroll-y>
+        <view class="text_left {{acIndex==item.id?'active':''}}" bindtap='clickList' data-index='{{item.id}}' wx:for="{{cList}}" wx:key="item.id">{{item.cName}}</view>
+    </scroll-view>
+  </view>
+  <view class='nav_right'>
+    <view class='cell-item cell' wx:for="{{shop_class}}" wx:key="item.id">
+     <image src='{{item.img_url}}' lazy-load mode='aspectFit'></image>
+     <view>{{item.name}}</view>
+     <view class='price'>￥{{item.price}}</view>
+    </view>
+  </view>
+</view>

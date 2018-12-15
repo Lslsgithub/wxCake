@@ -1,0 +1,39 @@
+/* pages/news/news.wxss */
+/* pages/shop_news/shop_news.wxss */
+/*组件背景*/
+page{
+  background-color: #ddd;
+}
+/*卡片*/
+.shop_news{
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin: 50rpx 30rpx;
+  padding: 30rpx;
+  border-radius:20rpx;  
+  display: flex;
+  flex-direction: column;
+}
+/*卡片内容*/
+.shop_news text:first-child{
+  font-size: 24px;
+  margin-bottom:20rpx 
+}
+.shop_news text:nth-child(2){
+  color: #ddd;
+  border-bottom: 1px solid #ddd;
+  padding-bottom:10rpx 
+}
+.shop_news text:nth-child(4){
+  border-bottom: 1px solid #ddd;
+  padding-bottom:20rpx ;
+  font-size: 24px;
+}
+.shop_news image{
+ margin: 20rpx auto;
+ width: 600rpx;
+ height: 300rpx
+}
+.shop_news :last-child{
+  margin-top: 15rpx;
+}

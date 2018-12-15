@@ -1,0 +1,25 @@
+<!--pages/shop_car/shop_car.wxml-->
+<view class='v-main'>
+  <view class='v-btn'>
+    <text>编辑</text>
+    <text>删除</text>
+  </view>
+  <view class='v-text'>
+  <navigator>
+    <image src='http://127.0.0.1:3000/mycake/cake1.jpg'></image>
+  </navigator>  
+    <view class='v-info'>
+      <view>拿破仑蛋糕</view>
+      <view>￥100</view>
+      <view class='count'>
+        <text>数量x1</text>
+        <text>单价￥100</text>
+        <text>总价100</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='operation'>
+  <button>结算</button>
+  <button>清空</button>
+</view>

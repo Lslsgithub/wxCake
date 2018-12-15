@@ -1,0 +1,47 @@
+/* pages/shop_car/shop_car.wxss */
+.v-main{
+  width: 100%;
+  border: 1rpx solid #ddd;
+  margin-top:20rpx 
+}
+.v-btn{
+  padding: 20rpx ;
+  color: gray;
+  font-size: 14px;
+  border-bottom: 1rpx solid #ddd
+}
+.v-btn text:first-child{
+  margin-right: 20rpx
+}
+.v-text{
+  display: flex;
+  padding: 20rpx
+}
+.v-text image{
+  width: 150rpx;
+  height: 150rpx;
+  margin: 10rpx 20rpx 10rpx 0;
+}
+.v-info .count{
+  margin-top: 20rpx;
+  color: gray;
+  font-size:15px; 
+}
+.v-info view:nth-child(2){
+  color: red
+}
+.count text{
+  margin-right: 20rpx
+}
+
+.operation{
+  padding: 30rpx 40rpx
+}
+
+.operation button:first-child{
+  margin-bottom: 20rpx;
+  background-color: #1AAD19;
+}
+.operation button:last-child{
+  background-color: red
+}

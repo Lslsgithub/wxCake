@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<!--轮播图-->
+<view class='slider'>
+  <swiper autoplay indicator-dots circular interval='3000'>
+    <swiper-item wx:for="{{swiper_img}}" wx:key="item.id">
+      <image src='{{item.img_url}}' mode='aspectFill' lazy-load></image>
+    </swiper-item>
+  </swiper>
+</view>
+<!--搜索-->
+<view class="search-out" bindtap="search">
+  <view class="search-inner">
+    <icon class="search-icon" type="search" size="14"></icon>
+    <view class="search-text">搜索</view>
+  </view>
+</view>
+<!--九宫格-->
+<view class="index_nav">
+  <view class="nav_item" wx:for="{{cake_menu}}" wx:key="item.id">
+    <image src='{{item.img_url}}' mode='aspectFill' lazy-load bindtap='cakeNews' data-id='{{item.id}}'></image>
+    <text>{{item.text}}</text>
+  </view>
+</view>
+<!--分隔的灰线-->
+<view class='divider'></view>

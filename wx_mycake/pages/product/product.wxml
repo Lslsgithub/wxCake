@@ -1,0 +1,18 @@
+<!--pages/product/product.wxml-->
+<view class="cell-item list" wx:for="{{list}}" wx:key="item.id">
+  <image class="shop_img" src='{{item.img_url}}'></image>
+  <view class='list_info'>
+    <text class="ell">蛋糕名称：{{item.cname}}</text>
+    <text>材料：水果、巧克力</text>
+    <text>包装：精美包装</text>
+    <text>生产日期：{{item.ctime}}</text>
+  </view>
+  <view class='star'>
+    <view class='star-after'>★★★★★</view>
+    <view class='star-before'>★★★★★</view>
+  </view>
+</view>
+<view class='no-page'>
+  <text>{{text}}</text>
+  <!--<text wx:if="{{hasMore}}">没有更多了</text>-->
+</view>
