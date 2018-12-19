@@ -19,6 +19,3 @@
   <view class='cell-item arrow'>设置</view>
 </view>
 <view class='divider'></view>
-<view >
-  <button>退出账号</button>
-</view>

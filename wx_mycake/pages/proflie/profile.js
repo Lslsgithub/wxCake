@@ -2,7 +2,6 @@
 Page({
 
   data: {
-
   },
 //跳转收货地址
   addr(){
@@ -11,8 +10,8 @@ Page({
     })
   },
 
-  onLoad: function (options) {
-
+  onLoad: function () {
+  
   },
 
  

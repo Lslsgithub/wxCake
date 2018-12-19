@@ -1,7 +1,8 @@
 {
   "pages": [
-        "pages/proflie/profile",
-    "pages/shop_car/shop_car",
+        "pages/shop_car/shop_car",
+     "pages/proflie/profile",
+
     "pages/shop_class/shop_class",
     "pages/index/index",
     "pages/search/search",
