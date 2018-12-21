@@ -1,9 +1,12 @@
 /* pages/search/search.wxss */
+page{
+background-color: #ddd;
+}
 .search-box{
-  background-color: #ddd;
   padding: 15rpx;
 }
 .search-inner{
+  position: relative;
   width: 100%;
   display: flex;
   background-color: white;
@@ -11,8 +14,45 @@
 }
 .search-inner .search-input{
   width: 650rpx;
-  font-size: 16px
+  font-size: 16px;
+  margin-left: 30rpx;
+  padding-left:10rpx 
 }
 .search-icon{
-
+  position: absolute;
+  left: 10rpx;
+  top:16rpx;
 }
+
+.listbox{
+  display: flex;
+}
+.list-item{
+  display: flex;
+  background: #fff;
+  padding: 20rpx;
+  margin: 20rpx 0rpx
+}
+.list-item .item-img{
+  width: 250rpx;
+  height: 250rpx;
+  margin-right: 20rpx
+}
+.item-title{
+  display: block;
+  font-size: 16px;
+  margin: 30rpx 0
+}
+.item-price{
+  color: red
+}
+
+.search_img{
+  width: 450rpx;
+  height: 400rpx;
+  margin: 200rpx auto 0
+}
+.item_img{
+    width: 400rpx;
+    height: 400rpx
+} 

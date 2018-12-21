@@ -2,6 +2,8 @@
 Page({
 
   data: {
+    nickName:"",
+    avatarUrl:""
   },
 //跳转收货地址
   addr(){
@@ -11,7 +13,17 @@ Page({
   },
 
   onLoad: function () {
-  
+    var self=this
+    console.log(self)
+    wx.getUserInfo({
+      success:res=>{
+        self.setData({
+          avatarUrl: res.userInfo.avatarUrl,
+          nickName: res.userInfo.nickName
+        })
+      }
+    })
+    console.log(this.avatarUrl,this.nickName)
   },
 
  

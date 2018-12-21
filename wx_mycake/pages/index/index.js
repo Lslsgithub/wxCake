@@ -1,10 +1,4 @@
-// pages/home/home.js
 Page({
-
-  /**
-   * 页面的初始数据
-   * 1.不校验合法ip
-   * 2.图片地址改为本机ip才可在手机端显示*/
   data: {
     swiper_img: [],
     cake_menu: []
@@ -16,9 +10,20 @@ Page({
         url: '/pages/shop_new/shop_new',
       })
     }
-    if(e.target.dataset.id==2){
+    else if(e.target.dataset.id==2){
       wx.navigateTo({
         url: '/pages/product/product',
+      })
+    } else if (e.target.dataset.id == 3){
+      wx.navigateTo({
+        url: '/pages/search/search',
+      })
+    } else{
+      //获取当前页面url
+      var a=getCurrentPages()
+      var b=a[0].route
+      wx.navigateTo({
+        url: '/pages/404/404?url='+b,
       })
     }
     
@@ -56,6 +61,7 @@ Page({
         }
       })
   },
+
 
 
   /**

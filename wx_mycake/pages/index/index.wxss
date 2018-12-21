@@ -10,14 +10,22 @@
   background-color: #ddd;
 }
 .search-out .search-inner{
+  position: relative;
   display: flex;
   justify-content: center;
   background-color: white;
   padding: 10rpx;
+  border-radius:10rpx 
+}
+.search-icon{
+  position: absolute;
+  left: 300rpx;
+  top:20rpx
 }
 .search-text{
   font-size: 16px;
-  color: gray
+  color: gray;
+  margin-left: 20rpx
 }
 /*菜单*/
 .index_nav{
@@ -37,7 +45,7 @@
 .index_nav .nav_item:nth-child(6){
 border-right: 0
 }
-.index_nav image{
+.index_nav  image{
   width: 80rpx;
   height: 80rpx;
   margin: auto auto;

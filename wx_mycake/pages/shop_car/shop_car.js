@@ -3,7 +3,7 @@ Page({
     carts: [],               // 购物车列表
     hasList: false,          // 列表是否有数据
     totalPrice: 0,           // 总价，初始为0
-    selectAllStatus: true,   // 全选状态，默认全选
+    selectAllStatus: false,   // 全选状态，默认全选
     obj: {
       name: "hello"
     }
@@ -12,8 +12,8 @@ Page({
     this.setData({
       hasList: true,
       carts: [
-        { id: 1, title: '拿破仑蛋糕', image: 'http://127.0.0.1:3000/mycake/cake1.jpg', num: 4, price: 100, selected: true },
-        { id: 2, title: '草莓蛋糕', image: 'http://127.0.0.1:3000/mycake/cake2.jpg', num: 1, price: 150, selected: true }
+        { id: 1, title: '拿破仑蛋糕', image: 'http://127.0.0.1:3000/mycake/cake1.jpg', num: 4, price: 100, selected: false },
+        { id: 2, title: '草莓蛋糕', image: 'http://127.0.0.1:3000/mycake/cake2.jpg', num: 1, price: 150, selected:false }
       ]
     });
     this.getTotalPrice();
@@ -30,6 +30,19 @@ Page({
       carts: carts
     });
     this.getTotalPrice();
+    //判断是否都选中
+    for(var i=0;i<carts.length;i++){
+      if(!carts[i].selected){
+        this.setData({
+          selectAllStatus:false
+        })
+        break;
+      }else{
+        this.setData({
+          selectAllStatus:true
+        })
+      }
+    }
   },
 
   /**
@@ -102,6 +115,7 @@ Page({
     });
     this.getTotalPrice();
   },
+
 
   /**
    * 计算总价

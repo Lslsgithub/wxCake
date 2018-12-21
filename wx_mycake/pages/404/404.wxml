@@ -1,0 +1,9 @@
+<view class='main'>
+<view class='notFound-img'>
+    <image class='item-img' src="{{itemImg}}"></image>
+</view>
+<view class='notFound-text'>
+  <text class='item-ftext'>该功能还在开发中....</text>
+  <text class='item-ttext'>将在{{s}}秒后返回来时页面</text>
+</view>
+</view>

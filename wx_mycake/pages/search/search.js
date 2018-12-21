@@ -1,64 +1,75 @@
 // pages/search/search.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-
+    value:"",
+    searchList:"",
+    searchImg:"http://127.0.0.1:3000/mycake/search.png"
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
+/*输入时触发，获取输入框中的值*/
+  input(e){
+  var that=this;
+  that.setData({
+    value:e.detail.value
+   })
+if (that.data.value) { //输入框中有值时，才发送请求
+   wx.showToast({
+     title: '搜索中...',
+     icon:"loading"
+   })
+   //根据输入的值，请求数据
+    wx.request({
+      url: 'http://127.0.0.1:3000/search?sc='+that.data.value,           
+      success: (res) => {
+        wx.hideLoading()
+        if(!that.data.value){
+          wx.showToast({
+            title: '没有这类商品',
+            icon:"none",
+            duration:1500
+          })
+        }else{
+        this.setData({
+          searchList: res.data
+        })
+      }
+      }
+    })
+  }else{ //输入框中没有值，清空列表
+    that.setData({
+      searchList:""
+    })
+  }
+
+  },
+/*清除输入框中的值*/
+clearInput(){
+  var that = this;
+  that.setData({
+    value: "",
+    searchList:""
+  })
+},
+
+
+ 
   onLoad: function (options) {
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady: function () {
-
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
   onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
+  }, 
   onUnload: function () {
-
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
   onPullDownRefresh: function () {
-
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
   onReachBottom: function () {
-
   },
-
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage: function () {
-
   }
 })
