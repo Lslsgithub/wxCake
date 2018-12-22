@@ -9,9 +9,9 @@
   </view>
   <view class='listBox' wx:if="{{searchList}}">
     <view class="list-item" wx:for="{{searchList}}" wx:key="index">
-     <image class="item-img" src='{{item.img_url}}'></image>
+     <image class="item-img" src='{{item.img_url}}' lazy-load bindtap='info'></image>
      <view class='item-text'>
-      <text class='item-title'>{{item.cname}}</text>
+      <text class='item-title' bindtap='info'>{{item.cname}}</text>
       <text class='item-price'>￥200</text>
      </view>
     </view>

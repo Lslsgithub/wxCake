@@ -30,7 +30,7 @@ Page({
       carts: carts
     });
     this.getTotalPrice();
-    //判断是否都选中
+    //判断是否全部选中
     for(var i=0;i<carts.length;i++){
       if(!carts[i].selected){
         this.setData({
@@ -132,6 +132,14 @@ Page({
       carts: carts,
       totalPrice: total.toFixed(2)
     });
-  }
+  },
 
+  /**
+   * 跳转详情页
+   */
+  jumpDetail:function(){
+    wx.navigateTo({
+      url: '/pages/detail/detail',
+    })
+  }
 })

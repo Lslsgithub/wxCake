@@ -54,10 +54,16 @@ clearInput(){
     searchList:""
   })
 },
- trim(str){ //去掉输入框中前后空格
+//去掉输入框中前后空格
+ trim(str){ 
     return str.replace(/(^\s*)|(\s*$)/g, "");
   },
-
+/*查看商品详情*/
+  info: function () {
+    wx.navigateTo({
+      url: '/pages/detail/detail',
+    })
+  },
  
   onLoad: function (options) {
   },

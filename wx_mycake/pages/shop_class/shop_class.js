@@ -38,7 +38,12 @@ classList:function(){
       acIndex: e.currentTarget.dataset.index
     })
   },
-
+/*查看商品详情*/
+info:function(){
+  wx.navigateTo({
+    url: '/pages/detail/detail',
+  })
+},
 
   onLoad: function (options) {
     //页面首次加载

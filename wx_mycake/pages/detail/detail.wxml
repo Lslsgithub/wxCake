@@ -1,0 +1,31 @@
+<view class='de-main'>
+  <view class='main-fItem'>
+    <image src="{{goods.img}}" class="product-img"></image>
+    <view class="carts-icon ">
+      <image src="../../img/detail1.png" bindtap="jumpCart"></image>
+      <text class="carts-icon-num">11</text>
+    </view>
+    <view class='product-option'>
+      <text class='option-numText'>数量</text>
+      <text class='option-add' bindtap='numAdd'>+</text>
+      <text class='option-num'>{{num}}</text>
+      <text class='option-sub' bindtap='numSub'>-</text>
+      <text class='add-cart'>加入购物车</text>
+      <image class='option-cart' src='../../img/detail2.png'></image>
+    </view>
+    <view class="goods-stock">{{goods.stock}}</view>
+    <view class="goods-title">{{goods.title}}</view>
+    <view class="goods-price">￥ {{goods.price}}</view>
+  </view>
+  <view class='gray-line'></view>
+  <view class="goods-tab-box">
+    <view class="goods-tab-nav {{curIndex === '0' ?'active':''}}" bindtap="showDetail" data-index="0">商品详情</view>
+    <view class="goods-tab-nav {{curIndex === '1' ?'active':''}}" bindtap="showDetail" data-index="1">产品参数</view>
+    <view class="goods-tab-nav {{curIndex === '2' ?'active':''}}" bindtap="showDetail" data-index="2">售后保障</view>
+    <view class="goods-content">
+      <view wx:if="{{curIndex === '0'}}">{{goods.detail}}</view>
+      <view wx:if="{{curIndex === '1'}}">{{goods.parameter}}</view>
+      <view wx:if="{{curIndex === '2'}}">{{goods.service}}</view>
+    </view>
+  </view>
+</view>

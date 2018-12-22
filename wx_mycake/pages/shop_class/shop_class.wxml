@@ -6,9 +6,9 @@
     </scroll-view>
   </view>
   <view class='nav_right'>
-    <view class='cell-item cell' wx:for="{{shop_class}}" wx:key="item.id">
-     <image src='{{item.img_url}}' lazy-load mode='aspectFit'></image>
-     <view>{{item.name}}</view>
+    <view class='cell-item cell' wx:for="{{shop_class}}" wx:key="item.id" >
+     <image src='{{item.img_url}}' lazy-load mode='aspectFit' bindtap='info'></image>
+     <view bindtap='info'>{{item.name}}</view>
      <view class='price'>￥{{item.price}}</view>
     </view>
   </view>

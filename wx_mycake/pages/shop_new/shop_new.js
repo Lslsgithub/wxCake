@@ -24,10 +24,10 @@ Page({
     })
   },
 
-  //查看新闻详情
+  //查看新品详情
   info: function () {
     wx.navigateTo({
-      url: '',
+      url: '/pages/detail/detail',
     })
   },
 

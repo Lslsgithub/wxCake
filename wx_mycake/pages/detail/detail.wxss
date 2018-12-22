@@ -1,0 +1,94 @@
+
+.main-fItem{
+  padding: 40rpx 45rpx;
+}
+/*产品图片*/
+.product-img{
+  width: 300rpx;
+  height: 300rpx;
+  display: block;
+  margin: 20rpx auto 0
+}
+/*右上角图标*/
+.carts-icon{
+  position: absolute;
+  right: 40rpx;
+  top: 40rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+.carts-icon image{
+   width: 80rpx;
+   height: 80rpx;
+}
+.carts-icon .carts-icon-num{
+  position: absolute;
+  left: -15rpx;
+  top:10rpx;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius:50%; 
+  background-color:#FFC0CB ;
+  color: #fff;
+  font-size: 16px
+}
+
+/*选项*/
+.product-option{
+  display: flex;
+  justify-content: space-around;
+  line-height: 100rpx;
+  width: 100%;
+  height: 100rpx;
+  border-radius:50rpx ;
+  background-color:#FFC0CB;
+  margin-top: 150rpx ;
+}
+.product-option .option-cart{
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 20rpx
+}
+.goods-stock{
+    font-size: 28rpx;
+    margin: 20rpx 0;
+    text-align: center
+}
+.goods-title{
+    font-size: 40rpx;
+    margin-bottom: 30rpx;
+     text-align: center
+}
+.goods-price{
+    font-size: 40rpx;
+    text-align: center;
+    color: red
+}
+
+/*分割线*/
+.gray-line{
+  width: 100%;
+  height: 30rpx;
+  background-color: #ddd
+}
+
+/*详细信息*/
+.goods-tab-nav{
+  display: inline-block;
+  width: 33%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  border-bottom: 1rpx solid #ededed;
+  box-sizing: border-box;
+  color: #c7c7cb;
+}
+/*激活*/
+.active{
+  color: pink;
+  border-bottom: 5rpx solid pink
+}
+
+goods-content{
+  padding: 40rpx
+}
