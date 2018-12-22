@@ -6,7 +6,8 @@ Page({
    */
   data: {
     itemImg:"http://127.0.0.1:3000/mycake/404.png",
-    s:5
+    s:5,
+    timer:""
   },
 
   /**
@@ -15,15 +16,21 @@ Page({
   onLoad: function (options) {
     var that=this;
     var timer=setInterval(function(){
+      console.log(1)
       that.data.s--;
       that.setData({
         s: that.data.s
       });
       if (!that.data.s) {
         clearInterval(timer)
+        wx.navigateBack({
+          url: options.path //跳转时传递的数据
+        })
       }
     },1000)
-    
+    that.setData({
+      timer:timer
+    })
   },
 
   /**
@@ -44,14 +51,15 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-
+  onUnload: function () { //返回来时页面，清除定时器
+    var that=this
+    clearInterval(that.data.timer)
   },
 
   /**

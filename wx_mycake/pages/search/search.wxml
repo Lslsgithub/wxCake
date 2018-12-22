@@ -8,7 +8,7 @@
     </view>
   </view>
   <view class='listBox' wx:if="{{searchList}}">
-    <view class="list-item" wx:for="{{searchList}}" :key="index">
+    <view class="list-item" wx:for="{{searchList}}" wx:key="index">
      <image class="item-img" src='{{item.img_url}}'></image>
      <view class='item-text'>
       <text class='item-title'>{{item.cname}}</text>

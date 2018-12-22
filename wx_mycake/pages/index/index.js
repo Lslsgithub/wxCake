@@ -20,10 +20,10 @@ Page({
       })
     } else{
       //获取当前页面url
-      var a=getCurrentPages()
-      var b=a[0].route
+      var pages=getCurrentPages() //获取当前页面信息
+      var path=pages[0].route //获取当前页对象
       wx.navigateTo({
-        url: '/pages/404/404?url='+b,
+        url: '/pages/404/404?url='+path,
       })
     }
     

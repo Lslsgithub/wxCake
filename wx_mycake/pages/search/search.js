@@ -15,7 +15,7 @@ Page({
   that.setData({
     value:e.detail.value
    })
-if (that.data.value) { //输入框中有值时，才发送请求
+    if (that.trim(that.data.value)) { //输入框中有值时，才发送请求
    wx.showToast({
      title: '搜索中...',
      icon:"loading"
@@ -25,7 +25,8 @@ if (that.data.value) { //输入框中有值时，才发送请求
       url: 'http://127.0.0.1:3000/search?sc='+that.data.value,           
       success: (res) => {
         wx.hideLoading()
-        if(!that.data.value){
+        if(!res.data.length){
+          console.log(that.data.value)
           wx.showToast({
             title: '没有这类商品',
             icon:"none",
@@ -53,7 +54,9 @@ clearInput(){
     searchList:""
   })
 },
-
+ trim(str){ //去掉输入框中前后空格
+    return str.replace(/(^\s*)|(\s*$)/g, "");
+  },
 
  
   onLoad: function (options) {

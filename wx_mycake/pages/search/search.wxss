@@ -6,24 +6,37 @@ background-color: #ddd;
   padding: 15rpx;
 }
 .search-inner{
-  position: relative;
   width: 100%;
   display: flex;
-  background-color: white;
   padding: 5rpx 0;
+  border-radius:10rpx; 
+  position: relative;
+  background-color: white;
 }
+/*输入框*/
 .search-inner .search-input{
   width: 650rpx;
   font-size: 16px;
   margin-left: 30rpx;
   padding-left:10rpx 
 }
+/*搜索框中的图标*/
 .search-icon{
   position: absolute;
   left: 10rpx;
   top:16rpx;
 }
-
+/*搜索界面显示的放大镜*/
+.search_img{
+  width: 450rpx;
+  height: 400rpx;
+  margin: 200rpx auto 0
+}
+.search_img>.item_img{
+    width: 400rpx;
+    height: 400rpx
+} 
+/*商品列表*/
 .listbox{
   display: flex;
 }
@@ -33,7 +46,7 @@ background-color: #ddd;
   padding: 20rpx;
   margin: 20rpx 0rpx
 }
-.list-item .item-img{
+.list-item>.item-img{
   width: 250rpx;
   height: 250rpx;
   margin-right: 20rpx
@@ -47,12 +60,3 @@ background-color: #ddd;
   color: red
 }
 
-.search_img{
-  width: 450rpx;
-  height: 400rpx;
-  margin: 200rpx auto 0
-}
-.item_img{
-    width: 400rpx;
-    height: 400rpx
-} 
