@@ -1,17 +1,17 @@
 <view class='de-main'>
   <view class='main-fItem'>
     <image src="{{goods.img}}" class="product-img"></image>
-    <view class="carts-icon ">
+    <view class="carts-icon {{scaleCart?'active_cart':''}}">
       <image src="../../img/detail1.png" bindtap="jumpCart"></image>
-      <text class="carts-icon-num">11</text>
+      <text class="carts-icon-num {{scaleCart?'to-carts-icon-num':''}}" wx:if="{{isNum}}">{{cartNum}}</text>
     </view>
     <view class='product-option'>
       <text class='option-numText'>数量</text>
       <text class='option-add' bindtap='numAdd'>+</text>
       <text class='option-num'>{{num}}</text>
       <text class='option-sub' bindtap='numSub'>-</text>
-      <text class='add-cart'>加入购物车</text>
-      <image class='option-cart' src='../../img/detail2.png'></image>
+      <text class='add-cart' bindtap='addCart'>加入购物车</text>
+      <image class='option-cart' src='../../img/detail2.png' bindtap='addCart'></image>
     </view>
     <view class="goods-stock">{{goods.stock}}</view>
     <view class="goods-title">{{goods.title}}</view>

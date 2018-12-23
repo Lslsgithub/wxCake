@@ -1,94 +1,137 @@
-
-.main-fItem{
+.main-fItem {
   padding: 40rpx 45rpx;
 }
+
 /*产品图片*/
-.product-img{
+
+.product-img {
   width: 300rpx;
   height: 300rpx;
   display: block;
-  margin: 20rpx auto 0
+  margin: 20rpx auto 0;
 }
+
 /*右上角图标*/
-.carts-icon{
+
+.carts-icon {
   position: absolute;
   right: 40rpx;
   top: 40rpx;
   width: 80rpx;
   height: 80rpx;
 }
-.carts-icon image{
-   width: 80rpx;
-   height: 80rpx;
+
+.carts-icon image {
+  width: 80rpx;
+  height: 80rpx;
 }
-.carts-icon .carts-icon-num{
+
+.active_cart {
+  animation: to_cart_scale 0.5s ease;
+}
+
+@keyframes to_cart_scale {
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.carts-icon .carts-icon-num {
   position: absolute;
   left: -15rpx;
-  top:10rpx;
+  top: 10rpx;
   width: 40rpx;
   height: 40rpx;
-  border-radius:50%; 
-  background-color:#FFC0CB ;
+  border-radius: 50%;
+  background-color: #ffc0cb;
   color: #fff;
-  font-size: 16px
+  text-align: center;
+  font-size: 16px;
+}
+
+.to-carts-icon-num {
+  animation: to_cart 0.3s ease;
+}
+
+/*添加数量动画*/
+
+@keyframes to_cart {
+  0% {
+    right: 100rpx;
+    top: 530rpx;
+    width: 10rpx;
+    height: 10rpx;
+    font-size: 10px;
+    transform: scale(4);
+  }
 }
 
 /*选项*/
-.product-option{
+
+.product-option {
   display: flex;
   justify-content: space-around;
   line-height: 100rpx;
   width: 100%;
   height: 100rpx;
-  border-radius:50rpx ;
-  background-color:#FFC0CB;
-  margin-top: 150rpx ;
+  border-radius: 50rpx;
+  background-color: #ffc0cb;
+  margin-top: 150rpx;
 }
-.product-option .option-cart{
+
+.product-option .option-cart {
   width: 60rpx;
   height: 60rpx;
-  margin-top: 20rpx
+  margin-top: 20rpx;
 }
-.goods-stock{
-    font-size: 28rpx;
-    margin: 20rpx 0;
-    text-align: center
+
+.goods-stock {
+  font-size: 28rpx;
+  margin: 20rpx 0;
+  text-align: center;
 }
-.goods-title{
-    font-size: 40rpx;
-    margin-bottom: 30rpx;
-     text-align: center
+
+.goods-title {
+  font-size: 40rpx;
+  margin-bottom: 30rpx;
+  text-align: center;
 }
-.goods-price{
-    font-size: 40rpx;
-    text-align: center;
-    color: red
+
+.goods-price {
+  font-size: 40rpx;
+  text-align: center;
+  color: red;
 }
 
 /*分割线*/
-.gray-line{
+
+.gray-line {
   width: 100%;
   height: 30rpx;
-  background-color: #ddd
+  background-color: #ddd;
 }
 
 /*详细信息*/
-.goods-tab-nav{
+
+.goods-tab-nav {
   display: inline-block;
-  width: 33%;
+  width: 33.3%;
   height: 90rpx;
   line-height: 90rpx;
   text-align: center;
   border-bottom: 1rpx solid #ededed;
   box-sizing: border-box;
   color: #c7c7cb;
-}
-/*激活*/
-.active{
-  color: pink;
-  border-bottom: 5rpx solid pink
+  transition: all 0.7s ease;
 }
 
-goods-content{
-  padding: 40rpx
+/*激活*/
+
+.active {
+  color: pink;
+  border-bottom: 5rpx solid pink;
+}
+
+goods-content {
+  padding: 40rpx;
 }

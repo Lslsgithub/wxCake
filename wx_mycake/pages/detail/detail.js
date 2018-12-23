@@ -17,6 +17,10 @@ Page({
     },
     curIndex: "0", //判断active
     num: 1, //数量 
+    cartNum: 0, //购物车中该商品的数量
+    scaleCart: false, //放大右上角图标
+    isNum: false, //是否显示图标
+
   },
 
   //激活
@@ -48,12 +52,25 @@ Page({
     }
   },
   /*跳转购物车页面*/
-  jumpCart:function(){
+  jumpCart: function() {
     wx.switchTab({
       url: "/pages/shop_car/shop_car",
     })
   },
-
+  /*加入购物车*/
+  addCart: function() {
+    this.setData({
+      cartNum: this.data.cartNum + this.data.num,
+      isNum: true,
+      scaleCart: true
+    })
+    /*图片放大动画执行完之后，清除该动画*/
+    setTimeout(() => {
+      this.setData({
+        scaleCart: false
+      })
+    }, 500)
+  },
 
   /**
    * 生命周期函数--监听页面加载
