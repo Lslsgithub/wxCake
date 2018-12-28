@@ -13,17 +13,17 @@ Page({
   },
 
   onLoad: function () {
-    var self=this
-    console.log(self)
-    wx.getUserInfo({
-      success:res=>{
-        self.setData({
-          avatarUrl: res.userInfo.avatarUrl,
-          nickName: res.userInfo.nickName
-        })
-      }
-    })
-    console.log(this.avatarUrl,this.nickName)
+    var that=this
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+          wx.getUserInfo({  //获取用户信息
+            success(res) {
+              //console.log(res.userInfo)
+              that.setData({
+                nickName:res.userInfo.nickName,
+                avatarUrl:res.userInfo.avatarUrl
+              })
+            }
+          })
   },
 
  

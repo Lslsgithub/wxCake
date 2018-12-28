@@ -38,6 +38,13 @@ Page({
    */
   onLoad: function(options) {
     this.getimgAjax()
+
+          wx.getUserInfo({
+            success(res) {
+              console.log(res.userInfo)
+            }
+          })
+        
   },
 
   /*创建函数，发送ajax请求图片*/

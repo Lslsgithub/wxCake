@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/index/index",    
+    "pages/index/index",
     "pages/detail/detail",
     "pages/search/search",
     "pages/404/404",
@@ -11,6 +11,7 @@
     "pages/logs/logs",
     "pages/product/product",
     "pages/addr/addr"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

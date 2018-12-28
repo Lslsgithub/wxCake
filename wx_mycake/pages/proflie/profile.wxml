@@ -1,6 +1,7 @@
 <!--pages/proflie/profile.wxml-->
-<view class='.avatar'>
-  <image src='http://127.0.0.1:3000/mycake/avatar.png'></image>
+<view class='avatar'>
+  <image src='{{avatarUrl}}'></image>
+  <view>{{nickName}}</view>
 </view>
 <view class='divider'></view>
 <view class='cell'>

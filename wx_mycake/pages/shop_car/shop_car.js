@@ -3,7 +3,7 @@ Page({
     carts: [],               // 购物车列表
     hasList: false,          // 列表是否有数据
     totalPrice: 0,           // 总价，初始为0
-    selectAllStatus: false,   // 全选状态，默认全选
+    selectAllStatus: false,   // 全选状态，默认不全选
     obj: {
       name: "hello"
     }
@@ -141,5 +141,8 @@ Page({
     wx.navigateTo({
       url: '/pages/detail/detail',
     })
+  },
+  onLoad(){
+   
   }
 })

@@ -20,7 +20,7 @@ Page({
      title: '搜索中...',
      icon:"loading"
    })
-   //根据输入的值，请求数据
+   //请求数据
     wx.request({
       url: 'http://127.0.0.1:3000/search?sc='+that.data.value,           
       success: (res) => {

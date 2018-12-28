@@ -16,3 +16,8 @@
   border-radius: 50%;
   background-color: #fff
 }
+.avatar view{
+  position: absolute;
+  left: 319rpx;
+  top:310rpx
+}
